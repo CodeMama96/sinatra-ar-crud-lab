@@ -1,0 +1,9 @@
+<h1> updates a specific article</h1>
+
+<form method= "POST" action="/articles/<%=@article.id%>">
+
+<input type="hidden" name="_method" value="PATCH">
+Title: <input type="text" id= "title" name="article[title]" value="<%= @article.title %>" >
+Content: <input type="text" id = "content" name="article[content]" value="<%= @article.content %>">
+<input type="submit" value="Update Article">
+</form>

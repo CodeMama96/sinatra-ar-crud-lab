@@ -1,0 +1,11 @@
+<h1> Show individual article </h1>
+
+<h3>Title: <%= @article.title %> </h3>
+ Content: <%= @article.content %> </p>
+     <br>
+<a href="/articles/<%= @article.id %>/edit">Edit</a>
+
+<form method="POST" action="/articles/<%= @article.id %>">
+   <input type="hidden" name="_method" value="DELETE">
+   <input type="submit" value="DELETE Article">
+</form>
